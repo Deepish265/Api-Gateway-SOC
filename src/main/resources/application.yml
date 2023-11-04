@@ -1,0 +1,27 @@
+## api-gateway service configuration
+---
+server:
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/API_GATEWAY_DB
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    show-sql: true
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: customer-service
+#          uri: http://localhost:8080/
+#          Predicates:
+#            - Path=/customers/**
+#        - id: customer-service
+#          uri: http://localhost:8085/
+#          Predicates:
+#            - Path=/customers/**

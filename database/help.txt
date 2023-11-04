@@ -1,0 +1,27 @@
+/* 
+ * Help file
+ * Provides step to run H2 database server
+ */
+
+A.] Prerequisite
+    1. Java
+       Install version 17 or above.
+
+B.] Running H2 database server
+    1. Run batch file on windows OS
+       h2-server.bat
+    2. Alternatively, if you are not on windows run following command from directory where
+       you can can locate this help.txt, h2-server.bat or h2-2.1.214.jar
+       java -cp h2-2.1.214.jar org.h2.tools.Server -tcp -web -ifNotExists
+     
+C.] Accessing H2 database from web browser
+    1. Open URL http://192.168.1.18:8082/
+       This brings login screen
+    2. On Login screen fill following details
+       Saved Settings: Generic H2 (Server)
+       Driver Class: org.h2.Driver
+       JDBC URL: jdbc:h2:tcp://localhost:9092/~/CUSTOMER_DB
+       Username: sa
+       Password: sa
+    3. Click "Connect" button.
+  
